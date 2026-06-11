@@ -13,9 +13,9 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* BACKGROUND */
+/* BACKGROUND (SUDAH FIX GOOGLE DRIVE) */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('https://raw.githubusercontent.com/hispik2/background-sekolah/main/background.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
@@ -35,11 +35,11 @@ body::before {
     z-index: -1;
 }
 
-/* TITLE (lebih rapat & stabil) */
+/* TITLE */
 .title {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 20px; /* 🔥 jarak ke tombol */
+    margin-bottom: 20px;
 }
 
 .title h1 {
@@ -56,10 +56,10 @@ body::before {
 .container {
     display: flex;
     justify-content: center;
-    padding: 10px 20px 40px; /* 🔥 jarak atas kecil */
+    padding: 10px 20px 40px;
 }
 
-/* GRID 6 KOLOM */
+/* GRID */
 .button-group {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -107,12 +107,10 @@ body::before {
 
 <body>
 
-<!-- TITLE -->
 <div class="title">
     <h1>TEACHERS PORTAL</h1>
 </div>
 
-<!-- BUTTON -->
 <div class="container">
     <div class="button-group">
 
@@ -129,8 +127,8 @@ body::before {
         <button class="btn" onclick="goToSubsunsubsYummyForm()">SUBS / UNSUBS YUMMY FORM</button>
         <button class="btn" onclick="goToActivityEventAprrovalForm()">EVENT APPROVAL FORM</button>
         <button class="btn" onclick="goToPodcastRequestForm()">PODCAST REQUEST FORM</button>
-        <button class="btn" onclick="goToHISCalenderAY2627()">HIS PIK 2 EVENT CALENDER </button>
-        <button class="btn" onclick="goToForgotfingerForm()">FORGOT FINGER FORM </button>
+        <button class="btn" onclick="goToHISCalenderAY2627()">HIS PIK 2 EVENT CALENDER</button>
+        <button class="btn" onclick="goToForgotfingerForm()">FORGOT FINGER FORM</button>
 
     </div>
 </div>
@@ -178,7 +176,6 @@ function goToHISCalenderAY2627() {
 function goToForgotfingerForm() {
     window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JAA1iDbm7HZARbuweXbxsvzaAWh2cdbrCVBQoWRys55hxtE?nav=MTVjNTJmZDctOWQyZi00YTdmLWJiNmYtN2U5MDZmNzFhZWFh", "_blank");
 }
-
 </script>
 
 </body>
