@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIS Teachers Portal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.4) 35%,
+        rgba(0,0,0,0.2) 60%,
+        rgba(0,0,0,0) 85%
+    );
+    z-index: -1;
+}
+
+/* TITLE (lebih rapat & stabil) */
+.title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px; /* 🔥 jarak ke tombol */
+}
+
+.title h1 {
+    display: inline-block;
+    background: rgba(0,0,0,0.55);
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 36px;
+    color: #fbbf24;
+    letter-spacing: 2px;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px 40px; /* 🔥 jarak atas kecil */
+}
+
+/* GRID 6 KOLOM */
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 95%;
+    max-width: 1300px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 14px 10px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .button-group {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TITLE -->
+<div class="title">
+    <h1>TEACHERS PORTAL</h1>
+</div>
+
+<!-- BUTTON -->
+<div class="container">
+    <div class="button-group">
+
+        <button class="btn" onclick="goToHandbook()">HANDBOOK</button>
+        <button class="btn" onclick="goToManageBac()">MANAGEBAC</button>
+        <button class="btn" onclick="goToMicrosoftAccount()">MICROSOFT ACCOUNT</button>
+        <button class="btn" onclick="goToICTAdmin()">ICT ADMIN</button>
+        <button class="btn" onclick="goToSchoolAdmin()">SCHOOL ADMIN</button>
+        <button class="btn" onclick="goToStudentPresence()">STUDENT PRESENCE</button>
+
+        <button class="btn" onclick="goToArrivalTimePrensenceForm()">ARRIVAL PRESENCE FORM</button>
+        <button class="btn" onclick="goToDismissalTimePrensenceForm()">DISMISSAL PRESENCE FORM</button>
+        <button class="btn" onclick="goToTeacherStationaryForm()">STATIONARY FORM</button>
+        <button class="btn" onclick="goToSubsunsubsYummyForm()">SUBS / UNSUBS YUMMY FORM</button>
+        <button class="btn" onclick="goToActivityEventAprrovalForm()">EVENT APPROVAL FORM</button>
+        <button class="btn" onclick="goToPodcastRequestForm()">PODCAST REQUEST FORM</button>
+        <button class="btn" onclick="goToHISCalenderAY2627()">HIS PIK 2 EVENT CALENDER </button>
+        <button class="btn" onclick="goToForgotfingerForm()">FORGOT FINGER FORM </button>
+
+    </div>
+</div>
+
+<script>
+function goToHandbook() {
+    window.open("https://sphacid-my.sharepoint.com/:b:/g/personal/stephanus_young_hopeacademy_sch_id/IQASohWYtfipQKDu-6v4IF5BAQASPi8sxUaj08S3JczzKf4?e=cTZR71", "_blank");
+}
+function goToManageBac() {
+    window.open("https://hopeinterculturalschoolpik2.managebac.com/", "_blank");
+}
+function goToMicrosoftAccount() {
+    window.open("https://login.microsoftonline.com/", "_blank");
+}
+function goToICTAdmin() {
+    window.location.href = "mailto:ictadmin@hopeacademy.sch.id";
+}
+function goToSchoolAdmin() {
+    window.open("https://wa.me/6281330500028", "_blank");
+}
+function goToStudentPresence() {
+    window.open("https://sphacid.sharepoint.com/:x:/s/academicteamhispik2/IQBCVjk8RFpcQLlsjM_0udJBAbdJM7UKrqamzutGNzbbUyU", "_blank");
+}
+function goToArrivalTimePrensenceForm() {
+    window.open("https://forms.office.com/r/jFhsGb36g4", "_blank");
+}
+function goToDismissalTimePrensenceForm() {
+    window.open("https://forms.office.com/r/8wYsXqe22f", "_blank");
+}
+function goToTeacherStationaryForm() {
+    window.open("https://shorturl.at/xsnmx", "_blank");
+}
+function goToSubsunsubsYummyForm() {
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JAAaME5atHSNTrY9w3UUX4KYAZaysmYC1kw7GKS_GYPxLoo?nav=YTkxZGUxOTAtMTQwZi00ZDI0LThhZGItNmE5YWU3YTc5YTU2", "_blank");
+}
+function goToActivityEventAprrovalForm() {
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JADgEzW5voCQTL9WdM_royMCATMXS7FPLJ_6-Yv7fZNmwe8?nav=ZGExYzc2MDQtNDVmZS00OWExLTliNWEtYzA1MDNhYTA4ZTIz", "_blank");
+}
+function goToPodcastRequestForm() {
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JADwov6bPzmaR75zoAogGZkzAeCdx-eJIQ506CqoIjfTsJo?nav=NDY4NzkyZDctMzQ5Yy00YWFhLTgxNDAtMTQ3ODdjMzM2MDI0", "_blank");
+}
+function goToHISCalenderAY2627() {
+    window.open("https://outlook.office365.com/owa/calendar/bd622c2a833b4362abf5f1312e9a406d@hopeacademy.sch.id/db3d161a5ead4b7cb339dfef00bc6f5e16949304486744965877/calendar.html", "_blank");
+}
+function goToForgotfingerForm() {
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JAA1iDbm7HZARbuweXbxsvzaAWh2cdbrCVBQoWRys55hxtE?nav=MTVjNTJmZDctOWQyZi00YTdmLWJiNmYtN2U5MDZmNzFhZWFh", "_blank");
+}
+
+</script>
+
+</body>
+</html>
