@@ -13,7 +13,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* BACKGROUND (SUDAH FIX GOOGLE DRIVE) */
+/* BACKGROUND */
 body {
     background: url('https://raw.githubusercontent.com/hispik2/background-sekolah/main/background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -35,11 +35,11 @@ body::before {
     z-index: -1;
 }
 
-/* TITLE */
+/* TITLE (lebih rapat & stabil) */
 .title {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 🔥 jarak ke tombol */
 }
 
 .title h1 {
@@ -56,10 +56,10 @@ body::before {
 .container {
     display: flex;
     justify-content: center;
-    padding: 10px 20px 40px;
+    padding: 10px 20px 40px; /* 🔥 jarak atas kecil */
 }
 
-/* GRID */
+/* GRID 6 KOLOM */
 .button-group {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -107,10 +107,12 @@ body::before {
 
 <body>
 
+<!-- TITLE -->
 <div class="title">
     <h1>TEACHERS PORTAL</h1>
 </div>
 
+<!-- BUTTON -->
 <div class="container">
     <div class="button-group">
 
@@ -119,23 +121,22 @@ body::before {
         <button class="btn" onclick="goToMicrosoftAccount()">MICROSOFT ACCOUNT</button>
         <button class="btn" onclick="goToICTAdmin()">ICT ADMIN</button>
         <button class="btn" onclick="goToSchoolAdmin()">SCHOOL ADMIN</button>
-        <button class="btn" onclick="goToStudentPresence()">STUDENT PRESENCE</button>
+        <button class="btn" onclick="goToStudentPresence()">STUDENT ATTEDANCE</button>
+        <button class="btn" onclick="goToTeacherStationaryForm()">STATIONARY REQUEST</button>
+        <button class="btn" onclick="goToSubsunsubsYummyForm()">SUBS / UNSUBS YUMMY REQUEST </button>
+        <button class="btn" onclick="goToActivityEventAprrovalForm()">PYP EVENT APPROVAL REQUEST </button>
+        <button class="btn" onclick="goToPodcastRequestForm()">MYP EVENT APPROVAL REQUEST</button>
+        <button class="btn" onclick="goToHISCalenderAY2627()">PYP TEACHER RESOURCES REQUEST </button>
+        <button class="btn" onclick="goToForgotfingerForm()">MYP TEACHER RESOURCES REQUEST </button>
+	<button class="btn" onclick="goToRoomBookingRequest()">ROOM BOOKING REQUEST </button>
 
-        <button class="btn" onclick="goToArrivalTimePrensenceForm()">ARRIVAL PRESENCE FORM</button>
-        <button class="btn" onclick="goToDismissalTimePrensenceForm()">DISMISSAL PRESENCE FORM</button>
-        <button class="btn" onclick="goToTeacherStationaryForm()">STATIONARY FORM</button>
-        <button class="btn" onclick="goToSubsunsubsYummyForm()">SUBS / UNSUBS YUMMY FORM</button>
-        <button class="btn" onclick="goToActivityEventAprrovalForm()">EVENT APPROVAL FORM</button>
-        <button class="btn" onclick="goToPodcastRequestForm()">PODCAST REQUEST FORM</button>
-        <button class="btn" onclick="goToHISCalenderAY2627()">HIS PIK 2 EVENT CALENDER</button>
-        <button class="btn" onclick="goToForgotfingerForm()">FORGOT FINGER FORM</button>
 
     </div>
 </div>
 
 <script>
 function goToHandbook() {
-    window.open("https://sphacid-my.sharepoint.com/:b:/g/personal/stephanus_young_hopeacademy_sch_id/IQASohWYtfipQKDu-6v4IF5BAQASPi8sxUaj08S3JczzKf4?e=cTZR71", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:b:/g/personal/stephanus_young_hisedu_sch_id/IQDkQnaabpRIR6V6X6zZnf9RAcPNh2VXsHsviRY-hvbRY_Q?e=vhKDGB", "_blank");
 }
 function goToManageBac() {
     window.open("https://hopeinterculturalschoolpik2.managebac.com/", "_blank");
@@ -150,32 +151,30 @@ function goToSchoolAdmin() {
     window.open("https://wa.me/6281330500028", "_blank");
 }
 function goToStudentPresence() {
-    window.open("https://sphacid.sharepoint.com/:x:/s/academicteamhispik2/IQBCVjk8RFpcQLlsjM_0udJBAbdJM7UKrqamzutGNzbbUyU", "_blank");
-}
-function goToArrivalTimePrensenceForm() {
-    window.open("https://forms.office.com/r/jFhsGb36g4", "_blank");
-}
-function goToDismissalTimePrensenceForm() {
-    window.open("https://forms.office.com/r/8wYsXqe22f", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:f:/g/personal/stephanus_young_hisedu_sch_id/IgCv2Y8TagnARYcDQ-eb2rA5AcpIfWvBsHTa9jsIBWIlPQo?e=ySj7YK", "_blank");
 }
 function goToTeacherStationaryForm() {
-    window.open("https://shorturl.at/xsnmx", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JAABTqm1Qs-nQK4grZ3oQ4ZZASb_HOaJkQuwsNmDEeAxMnI?nav=NDkwOWM3NjQtYTNmMy00ZWEyLWFjMjgtM2FiMGEyNzJkNjgx", "_blank");
 }
 function goToSubsunsubsYummyForm() {
-    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JAAaME5atHSNTrY9w3UUX4KYAZaysmYC1kw7GKS_GYPxLoo?nav=YTkxZGUxOTAtMTQwZi00ZDI0LThhZGItNmE5YWU3YTc5YTU2", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JAAaME5atHSNTrY9w3UUX4KYAZaysmYC1kw7GKS_GYPxLoo?nav=YTkxZGUxOTAtMTQwZi00ZDI0LThhZGItNmE5YWU3YTc5YTU2", "_blank");
 }
 function goToActivityEventAprrovalForm() {
-    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JADgEzW5voCQTL9WdM_royMCATMXS7FPLJ_6-Yv7fZNmwe8?nav=ZGExYzc2MDQtNDVmZS00OWExLTliNWEtYzA1MDNhYTA4ZTIz", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JADgEzW5voCQTL9WdM_royMCATMXS7FPLJ_6-Yv7fZNmwe8?nav=ZGExYzc2MDQtNDVmZS00OWExLTliNWEtYzA1MDNhYTA4ZTIz", "_blank");
 }
 function goToPodcastRequestForm() {
-    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JADwov6bPzmaR75zoAogGZkzAeCdx-eJIQ506CqoIjfTsJo?nav=NDY4NzkyZDctMzQ5Yy00YWFhLTgxNDAtMTQ3ODdjMzM2MDI0", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JACs8m5c3x8kQKOxi3DoGT6sAVqkYzpDv4ePbxSdLIiZ3Gw?nav=ZGE4ZGE1ZDUtMDVhMS00N2Y0LWJmOGMtODNkMzI1MzZkNWJk", "_blank");
 }
 function goToHISCalenderAY2627() {
-    window.open("https://outlook.office365.com/owa/calendar/bd622c2a833b4362abf5f1312e9a406d@hopeacademy.sch.id/db3d161a5ead4b7cb339dfef00bc6f5e16949304486744965877/calendar.html", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JAAxR8-cweOpRbl5nvHuhiXCAbzcx1yBNgRI5jeQpHItMi8?nav=YmJhYTMzZDktYzEyZS00YTczLTg2MzYtNzZlOTQ0OGM2NDQ2", "_blank");
 }
 function goToForgotfingerForm() {
-    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hopeacademy_sch_id/JAA1iDbm7HZARbuweXbxsvzaAWh2cdbrCVBQoWRys55hxtE?nav=MTVjNTJmZDctOWQyZi00YTdmLWJiNmYtN2U5MDZmNzFhZWFh", "_blank");
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JADj7RMmu9dfQakLP_R6zjZvAVkzYc_nd3vTOox7gOuNfi8?nav=M2I3ZGI1YmYtOGFkNS00MTI4LTliODktMjUxOTVlNzExY2M4", "_blank");
 }
+function goToRoomBookingRequest() {
+    window.open("https://sphacid-my.sharepoint.com/:l:/g/personal/stephanus_young_hisedu_sch_id/JADl-P42UtLYQYbJcj276KFMAXCgjWtdPMkH96ZU0W0ULmk?nav=Y2JkNzkwOWUtNDdkMC00YjZmLTlhMWYtZTYzMDNjYjc0ZmQ0", "_blank");
+}
+
 </script>
 
 </body>
