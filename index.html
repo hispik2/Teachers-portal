@@ -3,103 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HIS Teachers Portal</title>
+<title>TEACHER & STAFF PORTAL - HIS</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* BACKGROUND */
 body {
     background: url('https://raw.githubusercontent.com/hispik2/background-sekolah/main/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    min-height: 100vh;
+    padding: 20px 15px 80px;
     position: relative;
+    color: #fff;
 }
 
-/* OVERLAY */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(0,0,0,0.6) 0%,
-        rgba(0,0,0,0.4) 35%,
-        rgba(0,0,0,0.2) 60%,
-        rgba(0,0,0,0) 85%
-    );
-    z-index: -1;
-}
-
-/* TITLE (lebih rapat & stabil) */
-.title {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px; /* 🔥 jarak ke tombol */
-}
-
-.title h1 {
-    display: inline-block;
-    background: rgba(0,0,0,0.55);
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-size: 36px;
-    color: #fbbf24;
-    letter-spacing: 2px;
-}
-
-/* CONTAINER */
-.container {
+/* Container Utama */
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    padding: 10px 20px 40px; /* 🔥 jarak atas kecil */
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* GRID 6 KOLOM */
-.button-group {
+/* Banner Judul Main */
+.main-header {
+    background: #0d2757;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
+}
+
+.main-header h1 {
+    color: #ffc107;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Card Section Box */
+.section-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 12px 18px 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Header Kategori / Section */
+.category-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0d2757;
+    color: #ffffff;
+    padding: 6px 20px 6px 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.category-header svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Grid Layouts */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.grid-requests {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    width: 95%;
-    max-width: 1300px;
+    gap: 10px;
 }
 
-/* BUTTON */
-.btn {
-    padding: 14px 10px;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    border: none;
-    border-radius: 10px;
+/* Tombol Oranye Umum */
+.btn-orange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f58220 0%, #d96b00 100%);
     color: white;
-    font-size: 14px;
-    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 10px;
+    font-size: 13px;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 54px;
 }
 
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+.btn-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #ff8c2b 0%, #e57200 100%);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .button-group {
+.btn-orange svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* Tombol Kontak (WhatsApp Green Style) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #eef9f2;
+    border: 1.5px solid #25d366;
+    border-radius: 14px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-contact:hover {
+    background: #dcf5e7;
+    transform: translateY(-2px);
+}
+
+.btn-contact svg {
+    width: 32px;
+    height: 32px;
+    fill: #25d366;
+}
+
+.contact-text {
+    text-align: left;
+}
+
+.contact-title {
+    color: #0d2757;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.contact-sub {
+    color: #25d366;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Custom Spanning Grid untuk Section Requests */
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .grid-5, .grid-requests {
         grid-template-columns: repeat(3, 1fr);
     }
+    .span-2, .span-3 {
+        grid-column: span 1;
+    }
 }
 
-@media (max-width: 600px) {
-    .button-group {
-        grid-template-columns: repeat(1, 1fr);
+@media (max-width: 650px) {
+    .grid-3, .grid-5, .grid-requests, .contact-grid {
+        grid-template-columns: 1fr;
     }
-
-    .title h1 {
-        font-size: 24px;
+    .main-header h1 {
+        font-size: 20px;
     }
 }
 </style>
@@ -107,39 +205,162 @@ body::before {
 
 <body>
 
-<!-- TITLE -->
-<div class="title">
-    <h1>TEACHERS PORTAL</h1>
-</div>
+<div class="main-container">
 
-<!-- BUTTON -->
-<div class="container">
-    <div class="button-group">
-
-        <button class="btn" onclick="goToHandbook()">HANDBOOK</button>
-        <button class="btn" onclick="goToManageBac()">MANAGEBAC</button>
-        <button class="btn" onclick="goToMicrosoftAccount()">MICROSOFT ACCOUNT</button>
-        <button class="btn" onclick="goToICTAdmin()">ICT ADMIN</button>
-        <button class="btn" onclick="goToSchoolAdmin()">SCHOOL ADMIN</button>
-        <button class="btn" onclick="goToStudentPresence()">STUDENT ATTEDANCE</button>
-        <button class="btn" onclick="goToTeacherStationaryForm()">STATIONARY REQUEST</button>
-        <button class="btn" onclick="goToSubsunsubsYummyForm()">SUBS / UNSUBS YUMMY REQUEST </button>
-        <button class="btn" onclick="goToActivityEventAprrovalForm()">PYP EVENT APPROVAL REQUEST </button>
-        <button class="btn" onclick="goToPodcastRequestForm()">MYP EVENT APPROVAL REQUEST</button>
-        <button class="btn" onclick="goToHISCalenderAY2627()">PYP TEACHER RESOURCES REQUEST </button>
-        <button class="btn" onclick="goToForgotfingerForm()">MYP TEACHER RESOURCES REQUEST </button>
-	<button class="btn" onclick="goToRoomBookingRequest()">ROOM BOOKING REQUEST </button>
-	<button class="btn" onclick="goToAcademicData()">ACADEMIC DATA </button>
-	<button class="btn" onclick="goToMYPBooks()">MYP BOOKS </button>
-	<button class="btn" onclick="goToPhotos()">PHOTOS </button>
-
-
-
+    <!-- MAIN HEADER TITLE -->
+    <div class="main-header">
+        <h1>TEACHER PORTAL</h1>
     </div>
-</div>
 
+    <!-- SECTION 1: QUICK ACCESS -->
+    <div class="section-card">
+        <div class="category-header">
+            <!-- Icon Lighting/Bolt -->
+            <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+            <span>Quick Access</span>
+        </div>
+        <div class="grid-3">
+            <button class="btn-orange" onclick="goToManageBac()">
+                <!-- Icon Laptop -->
+                <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                ManageBac
+            </button>
+
+            <button class="btn-orange" onclick="goToMicrosoftAccount()">
+                <!-- Icon Grid / MS365 -->
+                <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+                Microsoft 365
+            </button>
+
+            <button class="btn-orange" onclick="goToStudentPresence()">
+                <!-- Icon Calendar Attendance -->
+                <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-9-6h5v5h-5z"/></svg>
+                Student Attendance
+            </button>
+        </div>
+    </div>
+
+    <!-- SECTION 2: HANDBOOKS & RESOURCES -->
+    <div class="section-card">
+        <div class="category-header">
+            <!-- Icon Book -->
+            <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            <span>Handbooks & Resources</span>
+        </div>
+        <div class="grid-5">
+            <button class="btn-orange" onclick="goToTeacherHandbook()">
+    <svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM11 18.5c-1.35-.5-3.05-.75-4.5-.75-1.2 0-2.6.2-3.5.65V7.5c.9-.45 2.3-.65 3.5-.65 1.45 0 3.15.25 4.5.75v10.9z"/></svg>
+    Teacher and Staff Handbook
+</button>
+
+<button class="btn-orange" onclick="goToStudentHandbook()">
+    <svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z"/></svg>
+    Student and Parent Handbook
+</button>
+            <button class="btn-orange" onclick="goToAcademicData()">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                Academic Data
+            </button>
+
+            <button class="btn-orange" onclick="goToMYPBooks()">
+                <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                MYP Books
+            </button>
+
+            <button class="btn-orange" onclick="goToPhotos()">
+                <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                School Photos
+            </button>
+        </div>
+    </div>
+
+    <!-- SECTION 3: REQUESTS & APPROVALS -->
+    <div class="section-card">
+        <div class="category-header">
+            <!-- Icon Clipboard/Check -->
+            <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <span>Requests & Approvals</span>
+        </div>
+
+        <div class="grid-requests">
+            <!-- Baris 1 -->
+            <button class="btn-orange span-2" onclick="goToTeacherStationaryForm()">
+                <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                Stationery Request
+            </button>
+
+            <button class="btn-orange span-2" onclick="goToSubsunsubsYummyForm()">
+                <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.46 3.91 3.45 4.38l-.95 7.62h2.99l.96-7.62C11.43 12.8 12.8 11.05 12.8 9V2h-1.8v7zm7-7v7h-2V2h-2v7c0 2.21 1.79 4 4 4v9h2V2h-2z"/></svg>
+                Yummy Subscription Changes
+            </button>
+
+            <button class="btn-orange span-2" onclick="goToRoomBookingRequest()">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                Room Booking Request
+            </button>
+
+            <!-- Baris 2 (4 items) -->
+            <button class="btn-orange span-3" style="grid-column: span 1.5;" onclick="goToActivityEventAprrovalForm()">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zM10.56 16.61l-2.42-2.42 1.41-1.41 1.01 1.01 3.54-3.54 1.41 1.41z"/></svg>
+                PYP Event Approval
+            </button>
+
+            <button class="btn-orange span-3" style="grid-column: span 1.5;" onclick="goToPodcastRequestForm()">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zM10.56 16.61l-2.42-2.42 1.41-1.41 1.01 1.01 3.54-3.54 1.41 1.41z"/></svg>
+                MYP Event Approval
+            </button>
+
+            <button class="btn-orange span-3" style="grid-column: span 1.5;" onclick="goToHISCalenderAY2627()">
+                <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                PYP Teacher Resources Request
+            </button>
+
+            <button class="btn-orange span-3" style="grid-column: span 1.5;" onclick="goToForgotfingerForm()">
+                <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                MYP Teacher Resources Request
+            </button>
+        </div>
+    </div>
+
+    <!-- SECTION 4: CONTACT US -->
+   <!-- SECTION 4: CONTACT US -->
+    <div class="section-card">
+        <div class="category-header">
+            <!-- Icon Headset -->
+            <svg viewBox="0 0 24 24"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
+            <span>Contact Us</span>
+        </div>
+
+        <div class="contact-grid">
+            <!-- ICT Support dengan Ikon Email (Surat) -->
+            <button class="btn-contact" onclick="goToICTAdmin()">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div class="contact-text">
+                    <div class="contact-title">ICT Support</div>
+                    <div class="contact-sub" style="color: #0d2757;">(Email)</div>
+                </div>
+            </button>
+
+            <!-- School Administration dengan Ikon WhatsApp -->
+            <button class="btn-contact" onclick="goToSchoolAdmin()">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+    <path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+    <path fill="#FFF" d="M17.47 14.38c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15-.2.3-.77.95-.94 1.15-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.46.13-.61.13-.13.29-.34.43-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.53.07-.81.38-.28.3-1.07 1.05-1.07 2.56 0 1.51 1.1 2.97 1.25 3.17.15.2 2.16 3.3 5.23 4.62.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.72-.7 1.97-1.38.25-.68.25-1.27.18-1.38-.07-.11-.27-.18-.56-.33z"/>
+</svg>
+                <div class="contact-text">
+                    <div class="contact-title">School Administration</div>
+                    <div class="contact-sub"style="color: #0d2757;">(WhatsApp)</div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+<!-- SCRIPT FUNCTIONALITY (dipertahankan sesuai kode asli) -->
 <script>
-function goToHandbook() {
+function goToTeacherHandbook() {
+    window.open("https://sphacid-my.sharepoint.com/:b:/g/personal/stephanus_young_hisedu_sch_id/IQDkQnaabpRIR6V6X6zZnf9RAcPNh2VXsHsviRY-hvbRY_Q?e=vhKDGB", "_blank");
+}
+function goToStudentHandbook() {
     window.open("https://sphacid-my.sharepoint.com/:b:/g/personal/stephanus_young_hisedu_sch_id/IQDkQnaabpRIR6V6X6zZnf9RAcPNh2VXsHsviRY-hvbRY_Q?e=vhKDGB", "_blank");
 }
 function goToManageBac() {
@@ -185,13 +406,8 @@ function goToMYPBooks() {
     window.open("https://sphacid.sharepoint.com/:f:/s/academicteamhispik2/IgDiiOYRJEjtSL16LJ8NDDDDAZn8XGZ3jo9xqZNoi0WhdmE?e=qHYFaM", "_blank");
 }
 function goToPhotos() {
-    window.open("https://sphacid.sharepoint.com/:f:/s/academicteamhispik2/IgDYja87Ct3_S7Sc63IUTRNZASSGrSB1vAS0QjGIggQqH9U?e=DuIff1", "_blank");
+    window.open("https://sphacid.sharepoint.com/:f:/s/academicteamhisedu_sch_id/IgDYja87Ct3_S7Sc63IUTRNZASSGrSB1vAS0QjGIggQqH9U?e=DuIff1", "_blank");
 }
-
-
-
-
 </script>
-
 </body>
 </html>
